@@ -26,3 +26,8 @@ Feature: Navigation
   Scenario: Navigate to Hair Care page
     And I click on HAIR CARE link in navbar
     Then I see "Hair Care" in the title
+
+                    @focus
+  Scenario: Navigate to Books page
+    And I click on BOOKS link in navbar
+    Then I see "Books" in the title
