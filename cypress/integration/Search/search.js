@@ -74,8 +74,9 @@ And("I click on search button", () => {
 });
 
 Then('I see "Seaweed Conditioner" as first element', () => {
-  cy.contains("Seaweed Conditioner");
-});
+    cy.get(':nth-child(1) > .thumbnail > :nth-child(1) > img').click();
+    cy.title().should("eq", "Seaweed Conditioner");
+  });
 Given("I open Search page", () => {
   cy.visit(searchpage);
 });
