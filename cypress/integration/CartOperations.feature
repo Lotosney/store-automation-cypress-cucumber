@@ -92,3 +92,59 @@ Feature: Cart Operations
         And I see 1 in item quantity
         And I click on checkout button
         Then I see Account Login in the title
+
+            @focus
+    Scenario: Adding 2 items to cart
+        Given I open Store page
+        And I click on Skinsheen Bronzer Stick
+        And I see Skinsheen Bronzer Stick in the title
+        And I click on Add to Cart Button
+        And I see Shopping Cart in the title
+        And I click on Continue Shopping button
+        And I click on  Absolute Anti-Age Spot Replenishing Unifying TreatmentSPF 15
+        And I click on Add to Cart Button
+        Then I see 71.50 in cart dropdown
+
+                    @focus
+    Scenario: Adding 2 items to cart and removing one
+        Given I open Store page
+        And I click on Skinsheen Bronzer Stick
+        And I see Skinsheen Bronzer Stick in the title
+        And I click on Add to Cart Button
+        And I see Shopping Cart in the title
+        And I click on Continue Shopping button
+        And I click on  Absolute Anti-Age Spot Replenishing Unifying TreatmentSPF 15
+        And I click on Add to Cart Button
+        And I see 71.50 in cart dropdown
+        And I click on remove button
+        Then I see $42.00 in cart dropdown
+
+    @focus
+    Scenario: Checking flat shipping rate
+        Given I open Store page
+        And I click on Skinsheen Bronzer Stick
+        And I see Skinsheen Bronzer Stick in the title
+        And I click on Add to Cart Button
+        Then I see $2.00 in flat shipping rate
+
+            @focus
+    Scenario: Checking flat shipping rate with 2 products
+        Given I open Store page
+        And I click on Skinsheen Bronzer Stick
+        And I see Skinsheen Bronzer Stick in the title
+        And I click on Add to Cart Button
+        And I click on Continue Shopping button
+        And I click on  Absolute Anti-Age Spot Replenishing Unifying TreatmentSPF 15
+        And I click on Add to Cart Button     
+        Then I see $2.00 in flat shipping rate
+
+                    @focus
+    Scenario: Checking total cost of 2 products with shipping rate
+        Given I open Store page
+        And I click on Skinsheen Bronzer Stick
+        And I see Skinsheen Bronzer Stick in the title
+        And I click on Add to Cart Button
+        And I click on Continue Shopping button
+        And I click on  Absolute Anti-Age Spot Replenishing Unifying TreatmentSPF 15
+        And I click on Add to Cart Button     
+        Then I see $73.50 in Total
