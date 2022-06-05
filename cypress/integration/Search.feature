@@ -1,5 +1,5 @@
 Feature: Searching
-    I want to search books
+    I want to test searching 
 
     @focus
     Scenario: Searching Paper Towns with no category selection

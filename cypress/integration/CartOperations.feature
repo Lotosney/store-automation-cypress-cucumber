@@ -1,5 +1,5 @@
 Feature: Cart Operations
-    I want to open a store page
+    I want to open a test cart operations
 
     @focus
     Scenario: Adding item to cart
@@ -48,7 +48,7 @@ Feature: Cart Operations
         Then I see 2 in item quantity
 
 
-            @focus
+    @focus
     Scenario: Checking item unit price in after quantity change in  cart
         Given I open Store page
         And I click on Skinsheen Bronzer Stick
@@ -71,7 +71,7 @@ Feature: Cart Operations
         Then I see $59.00 in item total value
 
 
-            @focus
+    @focus
     Scenario: Removing item from cart
         Given I open Store page
         And I click on Skinsheen Bronzer Stick
@@ -82,7 +82,7 @@ Feature: Cart Operations
         And I click on remove button
         Then I see "Your shopping cart is empty!" message
 
-                    @focus
+    @focus
     Scenario: Checkout
         Given I open Store page
         And I click on Skinsheen Bronzer Stick

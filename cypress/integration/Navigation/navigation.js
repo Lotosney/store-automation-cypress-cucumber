@@ -85,15 +85,15 @@ Then(`I see "Hair Care" in the title`, (title) => {
 });
 
 Given("I open Store page", () => {
-    cy.visit(storepage);
-  });
-  
-  And("I click on BOOKS link in navbar", () => {
-    cy.get(
-      '[href="https://automationteststore.com/index.php?rt=product/category&path=65"]'
-    ).click();
-  });
-  
-  Then(`I see "Books" in the title`, (title) => {
-    cy.title().should("eq", "Books");
-  });
+  cy.visit(storepage);
+});
+
+And("I click on BOOKS link in navbar", () => {
+  cy.get(
+    '[href="https://automationteststore.com/index.php?rt=product/category&path=65"]'
+  ).click();
+});
+
+Then(`I see "Books" in the title`, (title) => {
+  cy.title().should("eq", "Books");
+});

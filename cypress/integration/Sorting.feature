@@ -1,5 +1,5 @@
 Feature: Sorting
-    I want to search books
+    I want to test if sorting items works properly
 
     @focus
     Scenario: Sorting by Date Old>New
@@ -44,7 +44,7 @@ Feature: Sorting
         And I change sorting to High>Low
         Then I see "Flora By Gucci Eau Fraiche" as first element
 
-            @focus
+    @focus
     Scenario: Sorting Rating highest
         Given I open Search page
         And  I type Green in searchbox
